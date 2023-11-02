@@ -3,8 +3,12 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import datetime
 
+receiverFile = open("receivers.txt", "r");
+r_emailID = receiver.read().strip();
+receiverFile.close()
+
 sender_email = 'shayan851997@outlook.com'
-receiver_email = 'shayan851997@gmail.com'
+receiver_email = str(r_emailID)
 subject = f"Chaos Experiment Report | {datetime.now().strftime('%H:%M:%S')} IST"
 
 file_report = open("report.html", "r")
