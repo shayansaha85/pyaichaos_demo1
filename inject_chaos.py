@@ -20,6 +20,7 @@ def execute_CPUStress(conn, percentage, cores, duration):
         print("Executing stress")
         stdin, stdout, stderr = conn.exec_command("stress-ng -c {cores} -l {percentage} -t {duration}".format(cores=cores, percentage=percentage, duration=duration))
         print(stdout.read().decode().strip())
+        time.sleep(120)
 
 def get_data():
     return [perc, cores, duration]
