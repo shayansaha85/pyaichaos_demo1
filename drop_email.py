@@ -4,7 +4,7 @@ from email.mime.text import MIMEText
 from datetime import datetime
 
 receiverFile = open("./pyaichaos_demo1/receivers.txt", "r");
-r_emailID = receiver.read().strip();
+r_emailID = receiverFile.read().strip();
 receiverFile.close()
 
 sender_email = 'shayan851997@outlook.com'
