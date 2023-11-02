@@ -31,6 +31,6 @@ your_question = f"Write HTML content of a report for a chaos experiment done on 
 
 answer = ask_chat(your_question)
 
-file = open("./pyaichaos_demo1/report.html", "w")
+file = open("report.html", "w")
 file.write(answer)
 file.close()
