@@ -3,7 +3,7 @@ from jproperties import Properties
 
 properties = Properties()
 
-with open("chaos_config.properties", 'rb') as f:
+with open("./pyaichaos_demo1/chaos_config.properties", 'rb') as f:
     properties.load(f, "utf-8")
 
 
@@ -29,9 +29,8 @@ def ask_chat(question):
     return response.choices[0].message['content']
 your_question = f"Write HTML content of a report for a chaos experiment done on CentOS machine. We occupied {perc}% CPU for {duration}s duration. Wirte description on Chaos testing, CPU Chaos Testing, and a brief about the chaos experiment. Write it in a professional report style. In a newsletter format for sending email report"
 
-q = "what is the capital of india?"
-answer = ask_chat(q)
+answer = ask_chat(your_question)
 
-file = open("report.html", "w")
+file = open("./pyaichaos_demo1/report.html", "w")
 file.write(answer)
 file.close()
