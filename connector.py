@@ -5,7 +5,7 @@ from jproperties import Properties
 def connector():
     properties = Properties()
 
-    with open("config.properties", 'rb') as f:
+    with open("./pyaichaos_demo1/config.properties", 'rb') as f:
         properties.load(f, "utf-8")
 
 
