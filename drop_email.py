@@ -11,7 +11,7 @@ sender_email = 'shayan851997@outlook.com'
 receiver_email = str(r_emailID)
 subject = f"Chaos Experiment Report | {datetime.now().strftime('%H:%M:%S')} IST"
 
-file_report = open("./pyaichaos_demo1/report.html", "r")
+file_report = open("report.html", "r")
 dcontent = file_report.readlines()
 file_report.close()
 
