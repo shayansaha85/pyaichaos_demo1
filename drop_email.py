@@ -2,8 +2,9 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import datetime
+import summary
 
-receiverFile = open("./pyaichaos_demo1/receivers.txt", "r")
+receiverFile = open("receivers.txt", "r")
 r_emailID = receiverFile.read().strip()
 receiverFile.close()
 
@@ -11,15 +12,9 @@ sender_email = 'shayan851997@outlook.com'
 receiver_email = str(r_emailID)
 subject = f"Chaos Experiment Report | {datetime.now().strftime('%H:%M:%S')} IST"
 
-file_report = open("report.html", "r")
-dcontent = file_report.readlines()
-file_report.close()
 
-content = ""
-for x in dcontent:
-    content = content + x.strip() + "\n"
 
-html_content = str(content)
+html_content = str(summary.generate_report_content())
 # print(html_content)
 
 message = MIMEMultipart()

@@ -6,7 +6,7 @@ from jproperties import Properties
 
 properties = Properties()
 
-with open("./pyaichaos_demo1/chaos_config.properties", 'rb') as f:
+with open("chaos_config.properties", 'rb') as f:
     properties.load(f, "utf-8")
 
 
